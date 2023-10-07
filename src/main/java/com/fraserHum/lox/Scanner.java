@@ -1,15 +1,11 @@
-package com.craftinginterpreters.lox;
+package com.fraserHum.lox;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.print.DocFlavor.STRING;
-
-import com.craftinginterpreters.lox.Lox;
-
-import static com.craftinginterpreters.lox.TokenType.*;
+import static com.fraserHum.lox.TokenType.*;
 
 class Scanner {
   private final String source;
@@ -38,7 +34,7 @@ class Scanner {
     keywords.put("while", WHILE);
   }
 
-  Scanner(string source) {
+  Scanner(String source) {
     this.source = source;
   }
 
@@ -134,7 +130,7 @@ class Scanner {
     TokenType type = keywords.get(text);
     if (type == null)
       type = IDENTIFIER;
-    addToken(IDENTIFIER);
+    addToken(type);
   }
 
   private void number() {
