@@ -58,20 +58,23 @@ class Scanner {
       case ')':
         addToken(RIGHT_PAREN);
         break;
-      case '}':
+      case '{':
         addToken(LEFT_BRACE);
         break;
-      case ',':
+      case '}':
         addToken(RIGHT_BRACE);
         break;
-      case '.':
+      case ',':
         addToken(COMMA);
         break;
-      case '-':
+      case '.':
         addToken(DOT);
         break;
-      case '+':
+      case '-':
         addToken(MINUS);
+        break;
+      case '+':
+        addToken(PLUS);
         break;
       case ';':
         addToken(SEMICOLON);
